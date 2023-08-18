@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* Classes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background-color: #45297a;
+}
+
+main {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+nav button {
+  background: none;
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+nav button::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #6F42C1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+nav button:hover::after {
+  width: 100%;
+}
+
+.caixaQuiz {
+  padding: 100px 20px 100px 20px;
+}
+
+.caixa {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.barra-progresso {
+  padding: 5px;
+  margin: 20px 0px 20px 0px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.sub-barra-progresso {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px;
+  background-color: rgb(228, 169, 255);
+  transition: all 300ms;
+}
+
+.respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+.navbar-brand {
+  margin: 0px 30px 0px 30px;
+}
+
+div.fundo {
+  background-color: white;
+  text-align: center;
+  color: black;
+  width: 100%;
+  margin-left: 0px;
+  padding: 170px 210px 50px 210px;
+}
+
+.texto {
+  margin-bottom: 20px;
+}
+
+.fundo-claro {
+  background-color: #A243D2;
+  height: auto;
+  width: 100%;
+  padding: 50px 50px 120px 50px;
+  color: white;
+  text-align: center;
+}
+
+.resultado {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-resultado {
+  height: 400px;
+  width: 100%;
+}
+
+.descricao {
+  padding: 80px 50px 80px 50px;
+  margin-top: 65px;
+  width: 93.5%;
+  height: 400px;
+  position: absolute;
+  transform: scale(1, 1);
+  transition: all 0.5s;
+  cursor: pointer;
+  color: white;
+}
+
+.final button {
+  width: 100%;
+  position: absolute;
+  margin-top: 345px;
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white
+}
+
+.final button:hover {
+  background-color: #0473eb;
+}
+
+.final {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-restart {
+  text-align: center;
+}
+
+
+/* Ids */
+#texto-comecar{
+  text-decoration:none;
+  color:black;
+}
+
+#alinhar-titulos {
+  margin-bottom: 40px;
+}
+
+#inicio {
+  height: 400px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+#icone-cards {
+  z-index: 2;
+}
+
+#box {
+  background-color: rgba(255, 255, 255);
+  box-shadow: 1px 1px 30px 1px black;
+  position: relative;
+  color: black;
+  width: 100%;
+  height: 300px;
+  margin: 30px;
+  padding: 80px;
+  border-radius: 10px;
+  border: solid white 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: left;
+}
+
+#box::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 200%;
+  background: linear-gradient(180deg, #4af3ff, #4205eb);
+  animation: animate 3s linear infinite;
+}
+
+#box::after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  inset: 5px;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#alinhar {
+  margin-left: 0px;
+  width: 100%;
+}
+
+#btn-inicio {
+  color: rgb(169, 167, 179);
+  background: none;
+  border: none;
+}
+
+#btn-niveis {
+  color: rgb(169, 167, 179);
+  background: none;
+  border: none;
+}
+
+#btn-regras {
+  color: rgb(169, 167, 179);
+  background: none;
+  border: none;
+}
+
+#sessoes-rodape {
+  margin: 20px 50px 20px 0px;
+}
+
+#coluna-rodape {
+  border-left: 1px rgb(53, 51, 76) solid;
+  padding: 0px 0px 30px 30px;
+}
+
+#itens-rodape {
+  background-color: rgb(18, 15, 45);
+  color: white;
+  width: 100%;
+  margin-left: 0px;
+  margin-top: -20px;
+  border-top: 1px rgb(53, 51, 76) solid;
+  padding-top: 30px;
+}
+
+#texto-rodape {
+  color: rgb(169, 167, 179);
+}
+
+#titulo-rodape {
+  color: rgb(255, 255, 255);
+}
+
+#rodape {
+  background-color: rgb(18, 15, 45);
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+#comecar-quiz {
+  padding: 50px;
+  width: 70%;
+  border-radius: 10px;
+  background-color: #F0F0F0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#link-comecar-quiz {
+  width: 90%;
+  padding: 10px;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #dfd3f4;
+}
+
+#link-comecar-quiz:hover {
+  transition: all 1.0s;
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: #b2aeb9;
+}
+
+#foto-inicio {
+  margin-top: 400px;
+  padding: 90px 20px 20px 20px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #F0F0F0;
+  box-shadow: 1px 1px 30px 10px black;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+#foto {
+  margin-top: 250px;
+  background-image: url('IMG/logoCodi.png');
+  background-color: #6F42C1;
+  border: 1px white solid;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  width: 15%;
+  height: 30%;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  z-index: 5;
+  box-shadow: 1px 1px 30px 5px black;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(-50%, -40%);
+  }
+
+  50% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+#foto {
+  animation: float 2s ease-in-out infinite;
+}
+
+#nav {
+  background-color: white;
+  width: 100%;
+}
+
+#carrossel_niveis {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+}
+
+#img-carrossel {
+  height: 500px;
+  width: 100%;
+}
+
+#btn-quiz {
+  width: 100%;
+  text-align: start;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #008CCC;
+  color: white;
+}
+
+#btn-quiz:hover {
+  background-color: #1b5570;
+}
+
+
+
+/* Responsividade */
+@media (min-width:500px) and (max-width:992px) {
+  #icone-cards {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@media (max-width:992px) {
+  #foto {
+    width: 20%;
+  }
+
+  #coluna-rodape {
+    border: none;
+    padding: 0px;
+  }
+
+  div.fundo {
+    margin-top: 100px;
+    padding: 50px;
+  }
+}
+
+@media (min-width:622px) and (max-width:965px) {
+  #foto-inicio {
+    padding: 100px 10px 20px 10px;
+  }
+}
+
+@media (min-width:500px) and (max-width:800px) {
+  #box {
+    padding: 50px 0px 0px 0px;
+  }
+}
+
+@media (max-width:700px) {
+  #foto {
+    width: 30%;
+  }
+
+  div.fundo {
+    margin-top: 100px;
+    padding: 50px;
+  }
+
+  #carrossel_niveis {
+    height: 350px !important;
+  }
+
+  #img-carrossel {
+    height: 350px;
+  }
+}
+
+@media (max-width:500px) {
+  #foto {
+    width: 40%;
+  }
+
+  .fundo {
+    margin-top: 150px;
+  }
+
+  div.fundo {
+    padding: 20px;
+    margin-top: 170px;
+  }
+}
+
+@media (max-width:650px) {
+  #foto-inicio {
+    padding: 80px 20px 20px 20px;
+  }
+
+  #rodape {
+    padding-top: 80px;
+  }
+
+  .fundo-claro {
+    padding-bottom: 150px;
+  }
+
+  #comecar-quiz {
+    padding: 20px;
+  }
+}
+
+@media (min-width:500px) and (max-width:622px) {
+  #foto-inicio {
+    padding: 80px 20px 20px 20px;
+  }
+
+  #foto {
+    margin-top: 230px;
+    height: 170px;
+  }
+}
+
+@media (min-width:400px) and (max-width:500px) {
+  #foto {
+    width: 40%;
+    height: 180px;
+    margin-top: 220px;
+  }
+
+  #foto-inicio {
+    padding-top: 100px;
+  }
+}
+
+
+@media (max-width:400px) {
+  #foto {
+    width: 50%;
+    height: 180px;
+    margin-top: 200px;
+  }
+
+  #foto-inicio {
+    padding-top: 100px;
+  }
+
+  .fundo {
+    margin-top: 150px;
+  }
+
+  .imagem-resultado {
+    height: 300px;
+  }
+
+  .descricao {
+    height: 301px;
+    width: 90%;
+    margin-top: 85px;
+    padding: 15px;
+  }
+
+  .final button {
+    margin-top: 255px;
+    width: 85%;
+  }
+
+  #carrossel_niveis {
+    height: 250px !important;
+  }
+
+  #img-carrossel {
+    height: 250px;
+  }
+
+  #comecar-quiz {
+    padding: 20px;
+    width: 90%;
+  }
+}
